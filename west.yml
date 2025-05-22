@@ -1,12 +1,12 @@
 manifest:
   remotes:
     - name: zephyrproject
-      url-base: https://github.com/zephyrproject-rtos
+      url-base: https://github.com/LucaCiucci
   projects:
     - name: zephyr
       repo-path: zephyr
       remote: zephyrproject
-      revision: v4.1.0
+      revision: eclair_ci
       import:
         path-prefix: deps
         name-allowlist:
