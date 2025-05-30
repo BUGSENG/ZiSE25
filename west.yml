@@ -1,12 +1,14 @@
 manifest:
   remotes:
     - name: zephyrproject
+      url-base: https://github.com/zephyrproject-rtos
+    - name: bugseng
       url-base: https://github.com/LucaCiucci
   projects:
     - name: zephyr
       repo-path: zephyr
       remote: zephyrproject
-      revision: eclair_ci
+      revision: e80d86ab853976782a1623529fdb1672cae88307
       import:
         path-prefix: deps
         name-allowlist:
