@@ -2,8 +2,6 @@ manifest:
   remotes:
     - name: zephyrproject
       url-base: https://github.com/zephyrproject-rtos
-    - name: bugseng
-      url-base: https://github.com/LucaCiucci
   projects:
     - name: zephyr
       repo-path: zephyr
