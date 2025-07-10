@@ -11,6 +11,7 @@ manifest:
         path-prefix: deps
         name-allowlist:
           - cmsis
+          - cmsis_6
           - cmsis-dsp
           - percepio
           - picolibc
