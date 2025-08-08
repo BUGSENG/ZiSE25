@@ -28,6 +28,15 @@
 -config=MC4.R10.1,reports+={adopted, "any_area(any_loc(any_exp(macro(name(LOG_MODULE_DECLARE||LOG_ERR||z_tmcvt_divisor)))))"}
 -doc_end
 
+-doc_begin="Assigning the address of a function having the noreturn attribute to
+a function pointer without the attribute is safe, as it does not change the ABI and semantics."
+-config=MC4.R11.1,casts+={safe,
+  "kind(bitcast)&&
+   to(type(pointer(inner(return(builtin(void))&&all_param(1..3, pointer(builtin(void)))))))&&
+   from(expr(skip(!syntactic(),ref(property(noreturn)))))"
+}
+-doc_end
+
 -config=MC4.R20.7,arg_expansion={safe, safe}
 
 -remap_rtag={adopted, hide}
