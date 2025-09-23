@@ -373,7 +373,7 @@ Centralizing sensor sampling, logging, display updates, and alarm flag managemen
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: LLR-01
+  VALUE: HLR-01
 - TYPE: Parent
   VALUE: LLR-11
 - TYPE: Parent
