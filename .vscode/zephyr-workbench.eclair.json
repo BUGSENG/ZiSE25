@@ -1,0 +1,108 @@
+{
+  "configs": [
+    {
+      "name": "Coding Standard (lite)",
+      "description_md": "Lite configuration to enforce the coding standard excluding external frames and reports.\n\nThis configuration is designed to mimic the \"MC\" analysis from [BUGSENG/ZiSE25](https://github.com/BUGSENG/ZiSE25/blob/main/ECLAIR/analysis_MC.ecl).",
+      "main_config": {
+        "type": "preset",
+        "rulesets": [
+          {
+            "source": {
+              "type": "repo-path",
+              "repo": "BUGSENG presets",
+              "path": "rulesets/MC4-sel.ecl"
+            }
+          }
+        ],
+        "variants": [
+          {
+            "source": {
+              "type": "repo-path",
+              "repo": "BUGSENG presets",
+              "path": "variants/general/internal-only.ecl"
+            }
+          },
+          {
+            "source": {
+              "type": "system-path",
+              "path": "${workspaceFolder}/../custom_presets/example.ecl"
+            }
+          },
+          {
+            "source": {
+              "type": "repo-path",
+              "repo": "BUGSENG presets",
+              "path": "presets/zephyr/variant.ecl"
+            }
+          }
+        ],
+        "tailorings": [
+          {
+            "source": {
+              "type": "repo-path",
+              "repo": "BUGSENG presets",
+              "path": "presets/zephyr/tailoring.ecl"
+            }
+          }
+        ]
+      },
+      "reports": [
+        "ALL"
+      ]
+    },
+    {
+      "name": "BARR-C Stylistic",
+      "description_md": "Configuration to enforce a selection of the BARR-C stylistic guidelines.\n\nThis configuration is designed to mimic the \"MC\" analysis from [BUGSENG/ZiSE25](https://github.com/BUGSENG/ZiSE25/blob/main/ECLAIR/analysis_MC.ecl).",
+      "main_config": {
+        "type": "preset",
+        "rulesets": [
+          {
+            "source": {
+              "type": "system-path",
+              "path": "${workspaceFolder}/../custom_presets/barrc-stylistic-ruleset.ecl"
+            },
+            "edited_flags": {}
+          }
+        ],
+        "variants": [
+          {
+            "source": {
+              "type": "repo-path",
+              "repo": "BUGSENG presets",
+              "path": "variants/general/internal-only.ecl"
+            },
+            "edited_flags": {}
+          },
+          {
+            "source": {
+              "type": "repo-path",
+              "repo": "BUGSENG presets",
+              "path": "presets/zephyr/variant.ecl"
+            }
+          }
+        ],
+        "tailorings": [
+          {
+            "source": {
+              "type": "repo-path",
+              "repo": "BUGSENG presets",
+              "path": "presets/zephyr/tailoring.ecl"
+            },
+            "edited_flags": {}
+          }
+        ]
+      },
+      "reports": [
+        "ALL"
+      ]
+    }
+  ],
+  "current_config_index": 0,
+  "repos": {
+    "BUGSENG presets": {
+      "origin": "https://github.com/BUGSENG/zephyr-workbench-eclair-presets",
+      "ref": "main",
+      "rev": "7c8b41c235a7e4d624b12453f497e7f65cd53c84"
+    }
+  }
+}
