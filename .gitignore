@@ -2,7 +2,9 @@ deps/
 build/
 .venv/
 .west/
-.vscode/
+.vscode/settings.json
+.vscode/extensions.json
+.vscode/tasks.json
 temp_alert/build/
 temp_alert/.vscode/
 twister-ou*/
