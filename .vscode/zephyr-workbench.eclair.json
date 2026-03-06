@@ -166,7 +166,7 @@
     "BUGSENG presets": {
       "origin": "https://github.com/BUGSENG/zephyr-workbench-eclair-presets",
       "ref": "main",
-      "rev": "ec9cbdb26c26aaeed85fe7da20240fc1fb73d746"
+      "rev": "538602200ca31d2e52fd77fb407d83857674aac7"
     }
   }
 }
