@@ -51,6 +51,60 @@
       ]
     },
     {
+      "name": "Coding Standard",
+      "description_md": "A coding standard based on MISRA-C:2025 and BARR-C:2018.",
+      "main_config": {
+        "type": "preset",
+        "rulesets": [
+          {
+            "source": {
+              "type": "repo-path",
+              "repo": "BUGSENG presets",
+              "path": "presets/general/rulesets/NC3.ecl"
+            }
+          }
+        ],
+        "variants": [
+          {
+            "source": {
+              "type": "repo-path",
+              "repo": "BUGSENG presets",
+              "path": "presets/zephyr/variant.ecl"
+            },
+            "edited_flags": {}
+          },
+          {
+            "source": {
+              "type": "repo-path",
+              "repo": "BUGSENG presets",
+              "path": "presets/general/variants/internal-only.ecl"
+            },
+            "edited_flags": {}
+          }
+        ],
+        "tailorings": [
+          {
+            "source": {
+              "type": "repo-path",
+              "repo": "BUGSENG presets",
+              "path": "presets/zephyr/tailoring.ecl"
+            },
+            "edited_flags": {}
+          },
+          {
+            "source": {
+              "type": "system-path",
+              "path": "${workspaceFolder}/../custom_presets/example.ecl"
+            },
+            "edited_flags": {}
+          }
+        ]
+      },
+      "reports": [
+        "ALL"
+      ]
+    },
+    {
       "name": "BARR-C Stylistic",
       "description_md": "Configuration to enforce a selection of the BARR-C stylistic guidelines.\n\nThis configuration is designed to mimic the \"MC\" analysis from [BUGSENG/ZiSE25](https://github.com/BUGSENG/ZiSE25/blob/main/ECLAIR/analysis_MC.ecl).",
       "main_config": {
@@ -97,7 +151,7 @@
       ]
     }
   ],
-  "current_config_index": 0,
+  "current_config_index": 1,
   "repos": {
     "BUGSENG presets": {
       "origin": "https://github.com/BUGSENG/zephyr-workbench-eclair-presets",
