@@ -1,6 +1,43 @@
 {
   "configs": [
     {
+      "name": "Coding Standard",
+      "description_md": "A coding standard based on MISRA-C:2025 and BARR-C:2018.",
+      "main_config": {
+        "type": "preset",
+        "rulesets": [
+          {
+            "source": {
+              "type": "repo-path",
+              "repo": "BUGSENG presets",
+              "path": "presets/general/rulesets/MC4.ecl"
+            }
+          }
+        ],
+        "variants": [
+          {
+            "source": {
+              "type": "repo-path",
+              "repo": "BUGSENG presets",
+              "path": "presets/zephyr/variant.ecl"
+            }
+          }
+        ],
+        "tailorings": [
+          {
+            "source": {
+              "type": "repo-path",
+              "repo": "BUGSENG presets",
+              "path": "presets/zephyr/tailoring.ecl"
+            }
+          }
+        ]
+      },
+      "reports": [
+        "ALL"
+      ]
+    },
+    {
       "name": "Coding Standard (lite)",
       "description_md": "A lightweight coding standard based on a selection of MISRA-C:2025 rules.",
       "main_config": {
@@ -30,12 +67,6 @@
               "repo": "BUGSENG presets",
               "path": "presets/zephyr/tailoring.ecl"
             }
-          },
-          {
-            "source": {
-              "type": "system-path",
-              "path": "${workspaceFolder}/../custom_presets/example.ecl"
-            }
           }
         ]
       },
@@ -44,8 +75,8 @@
       ]
     },
     {
-      "name": "Coding Standard",
-      "description_md": "A coding standard based on MISRA-C:2025 and BARR-C:2018.",
+      "name": "Coding Standard (lite) (dev)",
+      "description_md": "A lightweight coding standard based on a selection of MISRA-C:2025 rules.\n\n**This is the same as \"Coding Standard (lite)\"  but includes an additional custom preset where wi can play with some more options**",
       "main_config": {
         "type": "preset",
         "rulesets": [
@@ -53,8 +84,9 @@
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "presets/general/rulesets/NC3.ecl"
-            }
+              "path": "presets/general/rulesets/MC4-sel.ecl"
+            },
+            "edited_flags": {}
           }
         ],
         "variants": [
@@ -65,29 +97,23 @@
               "path": "presets/zephyr/variant.ecl"
             },
             "edited_flags": {}
-          },
+          }
+        ],
+        "tailorings": [
           {
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "presets/general/variants/internal-only.ecl"
+              "path": "presets/zephyr/tailoring.ecl"
             },
             "edited_flags": {}
-          }
-        ],
-        "tailorings": [
+          },
           {
             "source": {
               "type": "system-path",
               "path": "${workspaceFolder}/../custom_presets/example.ecl"
             },
             "edited_flags": {}
-          },
-          {
-            "source": {
-              "type": "system-path",
-              "path": "${workspaceFolder}/../../zephyr-workbench-eclair-presets/presets/zephyr/tailoring.ecl"
-            }
           }
         ]
       },
@@ -97,16 +123,16 @@
     },
     {
       "name": "BARR-C Stylistic",
-      "description_md": "Configuration to enforce a selection of the BARR-C stylistic guidelines.\n\nThis configuration is designed to mimic the \"MC\" analysis from [BUGSENG/ZiSE25](https://github.com/BUGSENG/ZiSE25/blob/main/ECLAIR/analysis_MC.ecl).",
+      "description_md": "Configuration to enforce a selection of the BARR-C:2018 stylistic guidelines.",
       "main_config": {
         "type": "preset",
         "rulesets": [
           {
             "source": {
-              "type": "system-path",
-              "path": "${workspaceFolder}/../custom_presets/barrc-stylistic-ruleset.ecl"
-            },
-            "edited_flags": {}
+              "type": "repo-path",
+              "repo": "BUGSENG presets",
+              "path": "presets/general/rulesets/NC3-sel.ecl"
+            }
           }
         ],
         "variants": [
@@ -114,16 +140,9 @@
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "variants/general/internal-only.ecl"
+              "path": "presets/zephyr/variant.ecl"
             },
             "edited_flags": {}
-          },
-          {
-            "source": {
-              "type": "repo-path",
-              "repo": "BUGSENG presets",
-              "path": "presets/zephyr/variant.ecl"
-            }
           }
         ],
         "tailorings": [
@@ -142,7 +161,7 @@
       ]
     }
   ],
-  "current_config_index": 0,
+  "current_config_index": 1,
   "repos": {
     "BUGSENG presets": {
       "origin": "https://github.com/BUGSENG/zephyr-workbench-eclair-presets",
