@@ -21,13 +21,6 @@
               "repo": "BUGSENG presets",
               "path": "presets/zephyr/variant.ecl"
             }
-          },
-          {
-            "source": {
-              "type": "repo-path",
-              "repo": "BUGSENG presets",
-              "path": "presets/general/variants/internal-only.ecl"
-            }
           }
         ],
         "tailorings": [
@@ -85,18 +78,16 @@
         "tailorings": [
           {
             "source": {
-              "type": "repo-path",
-              "repo": "BUGSENG presets",
-              "path": "presets/zephyr/tailoring.ecl"
+              "type": "system-path",
+              "path": "${workspaceFolder}/../custom_presets/example.ecl"
             },
             "edited_flags": {}
           },
           {
             "source": {
               "type": "system-path",
-              "path": "${workspaceFolder}/../custom_presets/example.ecl"
-            },
-            "edited_flags": {}
+              "path": "${workspaceFolder}/../../zephyr-workbench-eclair-presets/presets/zephyr/tailoring.ecl"
+            }
           }
         ]
       },
@@ -151,12 +142,12 @@
       ]
     }
   ],
-  "current_config_index": 1,
+  "current_config_index": 0,
   "repos": {
     "BUGSENG presets": {
       "origin": "https://github.com/BUGSENG/zephyr-workbench-eclair-presets",
       "ref": "main",
-      "rev": "4206744446c57fa4c03e5fa5d11b1bbd32bff464"
+      "rev": "ec9cbdb26c26aaeed85fe7da20240fc1fb73d746"
     }
   }
 }
