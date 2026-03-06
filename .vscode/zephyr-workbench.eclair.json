@@ -2,7 +2,7 @@
   "configs": [
     {
       "name": "Coding Standard (lite)",
-      "description_md": "Lite configuration to enforce the coding standard excluding external frames and reports.\n\nThis configuration is designed to mimic the \"MC\" analysis from [BUGSENG/ZiSE25](https://github.com/BUGSENG/ZiSE25/blob/main/ECLAIR/analysis_MC.ecl).",
+      "description_md": "A lightweight coding standard based on a selection of MISRA-C:2025 rules.",
       "main_config": {
         "type": "preset",
         "rulesets": [
@@ -10,7 +10,7 @@
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "rulesets/MC4-sel.ecl"
+              "path": "presets/general/rulesets/MC4-sel.ecl"
             }
           }
         ],
@@ -19,20 +19,14 @@
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "variants/general/internal-only.ecl"
-            }
-          },
-          {
-            "source": {
-              "type": "system-path",
-              "path": "${workspaceFolder}/../custom_presets/example.ecl"
+              "path": "presets/zephyr/variant.ecl"
             }
           },
           {
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "presets/zephyr/variant.ecl"
+              "path": "presets/general/variants/internal-only.ecl"
             }
           }
         ],
@@ -42,6 +36,12 @@
               "type": "repo-path",
               "repo": "BUGSENG presets",
               "path": "presets/zephyr/tailoring.ecl"
+            }
+          },
+          {
+            "source": {
+              "type": "system-path",
+              "path": "${workspaceFolder}/../custom_presets/example.ecl"
             }
           }
         ]
@@ -102,7 +102,7 @@
     "BUGSENG presets": {
       "origin": "https://github.com/BUGSENG/zephyr-workbench-eclair-presets",
       "ref": "main",
-      "rev": "7c8b41c235a7e4d624b12453f497e7f65cd53c84"
+      "rev": "4206744446c57fa4c03e5fa5d11b1bbd32bff464"
     }
   }
 }
