@@ -47,7 +47,7 @@
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "rulesets/MC4-sel.ecl"
+              "path": "rulesets/MC4-STU.ecl"
             }
           }
         ],
@@ -75,8 +75,8 @@
       ]
     },
     {
-      "name": "Coding Standard (lite) (dev)",
-      "description_md": "A lightweight coding standard based on a selection of MISRA-C:2025 rules.\n\n**This is the same as \"Coding Standard (lite)\"  but includes an additional custom preset where wi can play with some more options**",
+      "name": "Full Project",
+      "description_md": "Full project analysis (including the Zephyr kernel) of a coding standard based on MISRA-C:2025.",
       "main_config": {
         "type": "preset",
         "rulesets": [
@@ -84,8 +84,9 @@
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "rulesets/MC4-sel.ecl"
-            }
+              "path": "rulesets/MC4.ecl"
+            },
+            "edited_flags": {}
           }
         ],
         "variants": [
@@ -94,6 +95,11 @@
               "type": "repo-path",
               "repo": "BUGSENG presets",
               "path": "variants/application.ecl"
+            },
+            "edited_flags": {
+              "exclude-external-reports": false,
+              "exclude-external-frames": false,
+              "exclude-external-files": false
             }
           }
         ],
@@ -103,13 +109,8 @@
               "type": "repo-path",
               "repo": "BUGSENG presets",
               "path": "tailorings/application.ecl"
-            }
-          },
-          {
-            "source": {
-              "type": "system-path",
-              "path": "${workspaceFolder}/../custom_presets/example.ecl"
-            }
+            },
+            "edited_flags": {}
           }
         ]
       },
@@ -160,7 +161,7 @@
     "BUGSENG presets": {
       "origin": "https://github.com/BUGSENG/zephyr-workbench-eclair-presets",
       "ref": "main",
-      "rev": "2646734c3d3d55086e0f4c47321830b6b232c9ac"
+      "rev": "c7cd79316a145b07da3ad8babb56405f8dd8cba4"
     }
   }
 }
