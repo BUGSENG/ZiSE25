@@ -2,7 +2,7 @@
   "configs": [
     {
       "name": "Coding Standard",
-      "description_md": "A coding standard based on MISRA-C:2025 and BARR-C:2018.",
+      "description_md": "A coding standard based on MISRA-C:2025.",
       "main_config": {
         "type": "preset",
         "rulesets": [
@@ -10,7 +10,7 @@
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "presets/general/rulesets/MC4.ecl"
+              "path": "rulesets/MC4.ecl"
             }
           }
         ],
@@ -19,7 +19,7 @@
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "presets/zephyr/variant.ecl"
+              "path": "variants/application.ecl"
             }
           }
         ],
@@ -28,7 +28,7 @@
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "presets/zephyr/tailoring.ecl"
+              "path": "tailorings/application.ecl"
             }
           }
         ]
@@ -47,7 +47,7 @@
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "presets/general/rulesets/MC4-sel.ecl"
+              "path": "rulesets/MC4-sel.ecl"
             }
           }
         ],
@@ -56,7 +56,7 @@
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "presets/zephyr/variant.ecl"
+              "path": "variants/application.ecl"
             }
           }
         ],
@@ -65,7 +65,7 @@
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "presets/zephyr/tailoring.ecl"
+              "path": "tailorings/application.ecl"
             }
           }
         ]
@@ -84,9 +84,8 @@
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "presets/general/rulesets/MC4-sel.ecl"
-            },
-            "edited_flags": {}
+              "path": "rulesets/MC4-sel.ecl"
+            }
           }
         ],
         "variants": [
@@ -94,9 +93,8 @@
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "presets/zephyr/variant.ecl"
-            },
-            "edited_flags": {}
+              "path": "variants/application.ecl"
+            }
           }
         ],
         "tailorings": [
@@ -104,16 +102,14 @@
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "presets/zephyr/tailoring.ecl"
-            },
-            "edited_flags": {}
+              "path": "tailorings/application.ecl"
+            }
           },
           {
             "source": {
               "type": "system-path",
               "path": "${workspaceFolder}/../custom_presets/example.ecl"
-            },
-            "edited_flags": {}
+            }
           }
         ]
       },
@@ -131,7 +127,7 @@
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "presets/general/rulesets/NC3-sel.ecl"
+              "path": "rulesets/NC3-sel.ecl"
             }
           }
         ],
@@ -140,9 +136,8 @@
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "presets/zephyr/variant.ecl"
-            },
-            "edited_flags": {}
+              "path": "variants/application.ecl"
+            }
           }
         ],
         "tailorings": [
@@ -150,9 +145,8 @@
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "presets/zephyr/tailoring.ecl"
-            },
-            "edited_flags": {}
+              "path": "tailorings/application.ecl"
+            }
           }
         ]
       },
@@ -166,7 +160,7 @@
     "BUGSENG presets": {
       "origin": "https://github.com/BUGSENG/zephyr-workbench-eclair-presets",
       "ref": "main",
-      "rev": "538602200ca31d2e52fd77fb407d83857674aac7"
+      "rev": "2646734c3d3d55086e0f4c47321830b6b232c9ac"
     }
   }
 }
