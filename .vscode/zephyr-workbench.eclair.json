@@ -19,7 +19,7 @@
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "variants/application.ecl"
+              "path": "variants/zephyr.ecl"
             }
           }
         ],
@@ -28,7 +28,7 @@
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "tailorings/application.ecl"
+              "path": "tailorings/zephyr.ecl"
             }
           }
         ]
@@ -57,7 +57,7 @@
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "variants/application.ecl"
+              "path": "variants/zephyr.ecl"
             },
             "edited_flags": {
               "exclude-external-reports": false,
@@ -71,11 +71,22 @@
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "tailorings/application.ecl"
+              "path": "tailorings/zephyr.ecl"
             },
             "edited_flags": {}
           }
         ]
+      },
+      "reports": [
+        "ALL"
+      ]
+    },
+    {
+      "name": "Full Project - 2",
+      "description_md": "Full project analysis (including the Zephyr kernel) of a coding standard based on MISRA-C:2025.\n\n**NOTE**: this configuration uses the upstream ECLAIR configuration provided by Zephyr, while the _Full Project_ configuration uses the one provided by the presets repository.",
+      "main_config": {
+        "type": "zephyr-ruleset",
+        "ruleset": "ECLAIR_RULESET_ZEPHYR_GUIDELINES"
       },
       "reports": [
         "ALL"
@@ -100,7 +111,7 @@
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "variants/application.ecl"
+              "path": "variants/zephyr.ecl"
             }
           }
         ],
@@ -109,7 +120,7 @@
             "source": {
               "type": "repo-path",
               "repo": "BUGSENG presets",
-              "path": "tailorings/application.ecl"
+              "path": "tailorings/zephyr.ecl"
             }
           }
         ]
@@ -124,7 +135,7 @@
     "BUGSENG presets": {
       "origin": "https://github.com/BUGSENG/zephyr-workbench-eclair-presets",
       "ref": "main",
-      "rev": "c7cd79316a145b07da3ad8babb56405f8dd8cba4"
+      "rev": "780c185de972bfe838735a6ea86a3e5d8bd8053b"
     }
   }
 }
