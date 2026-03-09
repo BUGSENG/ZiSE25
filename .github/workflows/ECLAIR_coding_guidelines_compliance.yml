@@ -1,6 +1,8 @@
 name: "ECLAIR coding guidelines compliance"
 on:
   push:
+    branches-ignore:
+      - 'zephyr-workbench-demo'
     paths-ignore:
       - 'README.md'
       - 'tests/**'

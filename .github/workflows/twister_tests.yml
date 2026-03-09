@@ -1,6 +1,8 @@
 name: "temp_alert tests"
 on:
   push:
+    branches-ignore:
+      - 'zephyr-workbench-demo'
     paths-ignore:
       - 'README.md'
       - 'ECLAIR/**'

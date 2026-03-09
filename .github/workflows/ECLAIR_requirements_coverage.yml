@@ -1,6 +1,8 @@
 name: "ECLAIR coverage and requirements"
 on:
   push:
+    branches-ignore:
+      - 'zephyr-workbench-demo'
     paths-ignore:
       - 'README.md'
       - 'tests/**'

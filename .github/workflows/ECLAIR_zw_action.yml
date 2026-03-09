@@ -1,0 +1,49 @@
+name: "ECLAIR analysis (zephyr-workbench action)"
+on:
+  push:
+    branches:
+      - 'zephyr-workbench-demo'
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  Coding-Guidelines:
+    runs-on: saas.eclairit.com
+    container:
+      image: bugseng/github-runner:latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: 'true'
+
+      - name: Prepare
+        run: |
+          set -eu
+          ./setup.sh
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build and analyze with ECLAIR
+        id: run-analyze
+        uses: BUGSENG/zephyr-workbench-eclair-tools/cli@main
+        with:
+          project-dir: '.'
+          board: 'stm32f746g_disco'
+          config: 'Application Only'
+          venv-path: '../.venv'
+
+      - name: ECLAIR analysis log
+        if: always()
+        run: cat ${{ steps.run-analyze.outputs.sca-dir }}/DIAGNOSTIC.txt
+
+      - name: Upload ECLAIR database
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eclair-out
+          path: ${{ steps.run-analyze.outputs.sca-dir }}
