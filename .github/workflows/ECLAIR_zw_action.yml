@@ -17,6 +17,7 @@ jobs:
     runs-on: saas.eclairit.com
     container:
       image: bugseng/github-runner:latest
+      options: --pull always
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -66,4 +67,4 @@ jobs:
         env:
           WTOKEN: ${{secrets.WTOKEN}}
           VARIANT: ${{ matrix.board }}
-        run: ECLAIR/action_push.sh "${WTOKEN}" build/sca/eclair
+        run: ECLAIR/action_push.sh "${WTOKEN}" ${{ steps.run-analyze.outputs.sca-dir }}
