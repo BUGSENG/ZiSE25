@@ -9,6 +9,9 @@ env:
 
 jobs:
   Coding-Guidelines:
+    strategy:
+      matrix:
+        board: ["stm32f746g_disco"]
     runs-on: saas.eclairit.com
     container:
       image: bugseng/github-runner:latest
@@ -41,9 +44,24 @@ jobs:
         if: always()
         run: cat ${{ steps.run-analyze.outputs.sca-dir }}/DIAGNOSTIC.txt
 
+      - name: Artifact name
+        id: artifact_name
+        if: always()
+        run: |
+          set -eu
+          BOARD_NAME=${{ matrix.board }}
+          echo "ARTIFACT_NAME=ECLAIR_out_zephyr_workbench_cfg_$(echo "${BOARD_NAME}" | tr '/' '_')" >> $GITHUB_ENV
+
       - name: Upload ECLAIR database
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: eclair-out
           path: ${{ steps.run-analyze.outputs.sca-dir }}
+
+      - name: Publish ECLAIR results
+        if: always()
+        env:
+          WTOKEN: ${{secrets.WTOKEN}}
+          VARIANT: ${{ matrix.board }}
+        run: ECLAIR/action_push.sh "${WTOKEN}" build/sca/eclair
