@@ -10,7 +10,7 @@ env:
   ENABLE_ECLAIR_BOT: true
 
 jobs:
-  Coding-Guidelines:
+  Zephyr-Workbench-Guidelines:
     strategy:
       matrix:
         board: ["stm32f746g_disco"]
