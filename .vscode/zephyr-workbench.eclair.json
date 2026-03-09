@@ -62,7 +62,8 @@
             "edited_flags": {
               "exclude-external-reports": false,
               "exclude-external-frames": false,
-              "exclude-external-files": false
+              "exclude-external-files": false,
+              "exclude-build-tree": false
             }
           }
         ],
