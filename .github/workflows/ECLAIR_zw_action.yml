@@ -19,6 +19,7 @@ jobs:
       image: bugseng/github-runner:latest
       options: --pull always
     steps:
+      - run: anybadge --help
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
