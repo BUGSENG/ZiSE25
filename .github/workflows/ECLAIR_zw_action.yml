@@ -6,7 +6,7 @@ on:
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  ANALYSIS_KIND: coding_guidelines
+  ANALYSIS_KIND: zephyr_workbench_eclair_config
   ENABLE_ECLAIR_BOT: true
 
 jobs:
