@@ -55,13 +55,6 @@ jobs:
           BOARD_NAME=${{ matrix.board }}
           echo "ARTIFACT_NAME=ECLAIR_out_zephyr_workbench_cfg_$(echo "${BOARD_NAME}" | tr '/' '_')" >> $GITHUB_ENV
 
-      - name: Upload ECLAIR database
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: eclair-out
-          path: ${{ steps.run-analyze.outputs.sca-dir }}
-
       - name: Publish ECLAIR results
         if: always()
         env:
